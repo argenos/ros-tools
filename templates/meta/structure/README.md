@@ -68,14 +68,12 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conven
 ## Authors
 
 * **Name Lastname** - *What you did* <br/>
-  **Contact info**: email, github and gitgate
 
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://mas.b-it-center.de/gitgate/b-it-bots/bitbots_athome/graphs/indigo) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
