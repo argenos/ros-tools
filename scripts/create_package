@@ -4,6 +4,7 @@ import os
 import sys
 import getopt
 from distutils import dir_util, file_util
+from shutil import copytree
 import inspect
 
 from catkin_pkg.package_templates import create_package_files, PackageTemplate
@@ -47,12 +48,8 @@ def setup_structure(package_name, target_path, kind='pkg'):
     templates = {"project_name": package_name, '1': package_name}
 
     if kind == 'pkg':
-        file_util.write_file('%s/ros/scripts/%s_node' % (target_path,
-                                                         package_name), '')
-        dir_util.mkpath('%s/common/include/%s' % (target_path, package_name))
-        dir_util.mkpath('%s/ros/include/%s' % (target_path, package_name))
-        dir_util.mkpath('%s/common/src/%s' % (target_path, package_name))
-        dir_util.mkpath('%s/ros/src/%s' % (target_path, package_name))
+        os.rename('%s/ros/scripts/pkg_node' % target_path,
+                  '%s/ros/scripts/%s_node' % (target_path, package_name[4:]))
     elif kind in ['scenario', 'skill']:
         dir_util.mkpath('%s/ros/src/%s' % (target_path, package_name))
         file_util.write_file('%s/ros/src/%s/__init__.py' %
